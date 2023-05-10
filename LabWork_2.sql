@@ -27,7 +27,7 @@ WHERE  (salary  < 5000 OR salary > 12000);
 Отсортируйте данные в порядке возрастания даты найма.*/
 SELECT  last_name, job_id, hire_date
 FROM employees
-WHERE hire_date BETWEEN '20.02.98' AND '01.05.98'
+WHERE hire_date BETWEEN '20.02.98' AND '01.05.98';
 
 --5.	Выведите фамилию и номер отдела всех служащих из отделов 20 и 50. Отсортируйте данные по фамилиям в алфавитном порядке.
 SELECT  last_name, department_id
@@ -47,12 +47,12 @@ WHERE  (salary  < 5000 OR salary > 12000)
 --7.	Выведите фамилию и дату найма всех служащих, нанятых в 1994 г.
 SELECT  last_name, hire_date
 FROM employees
-WHERE hire_date LIKE '%94'
+WHERE hire_date LIKE '%94';
 
 --8.	Выведите фамилии и должности всех служащих, не имеющих менеджера.
 SELECT  last_name, job_id
 FROM employees
-WHERE manager_id IS NULL
+WHERE manager_id IS NULL;
 
 /*9.	Выведите фамилию, и комиссионные всех служащих, зарабатывающих комиссионные. 
 Отсортируйте данные в порядке убывания окладов и комиссионных.*/
@@ -64,14 +64,14 @@ ORDER BY salary, commission_pct DESC;
 --10.	Выведите все фамилии служащих, в которых третья буква – а.
 SELECT  last_name
 FROM employees
-WHERE last_name LIKE '__a%'
+WHERE last_name LIKE '__a%';
 
 --11.	Выведите фамилии всех служащих, в которых есть буквы «а» и «е».
 
 SELECT  last_name
 FROM employees
 WHERE last_name LIKE '%a%'
-      AND last_name LIKE '%e%'
+      AND last_name LIKE '%e%';
 
 /*12.	запросите фамилии, должности и оклады всех служащих, работающих торговыми представителями (SA_REP) 
 или клерками на складе (ST_CLERK) и с окладом, не равным  $2500, $3500 и $7000.*/
@@ -81,7 +81,7 @@ SELECT  last_name, job_id, salary
 FROM employees
 WHERE job_id = 'SA_REP'
 	OR job_id = 'ST_CLERK'
-	AND salary NOT IN (2500,3500,7000)
+	AND salary NOT IN (2500,3500,7000);
 	
 /*13.	Измените lab2_6.sql так, чтобы получить фамилии оклады и комиссионные всех служащих, 
 у которых сумма комиссионных превышает 20%. 
@@ -90,4 +90,4 @@ SELECT  last_name "Employee", salary "Mounthly Salary"
 FROM employees
 WHERE  (salary  < 5000 OR salary > 12000)
 		AND department_id IN (20, 50)
-		AND commission_pct > 0.2
+		AND commission_pct > 0.2;
