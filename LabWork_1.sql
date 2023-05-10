@@ -19,11 +19,11 @@ FROM employees;
 DESCRIBE departments
 
 SELECT *
-FROM departments
+FROM departments;
 
 
 --3.	Покажите структуру таблицы EMPLOYEES. 
-DESCRIBE employees
+DESCRIBE employees;
 /*4.	Составьте запрос для вывода имени каждого служащего, 
 должности, даты найма и номера. Номер служащего должен быть первым. */
 SELECT employee_id,first_name,job_id,hire_date
@@ -31,7 +31,7 @@ FROM employees
 
 -- 5.	Составьте запрос для вывода неповторяющихся должностей из таблицы EMPLOYEES
 SELECT DISTINCT job_id
-FROM employees
+FROM employees;
 
 /* 6.	Выведите на экран имя, соединённое 
 с идентификатором должности через запятую и пробел. 
