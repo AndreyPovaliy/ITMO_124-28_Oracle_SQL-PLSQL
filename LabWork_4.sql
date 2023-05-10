@@ -11,7 +11,7 @@
 Результаты отсортируйте по количеству отработанных месяцев. Округлите число до ближайшего целого.*/
 
 SELECT  last_name, round((CURRENT_DATE-hire_date)/365*12,0) "MONTH_WORKED"
-FROM employees
+FROM employees;
 
 
 
@@ -39,10 +39,9 @@ FROM employees;
 /*5.	По каждому служащему выведите фамилию, дату  найма и день недели, когда он был нанят на работу. 
 Назовите последний столбец DAY. Отсортируйте результаты по датам.*/
  
-SELECT last_name, hire_date, TO_CHAR(hire_date, 'DAY')
-								AS DAY
-FROM employees;
-ORDER BY hire_date
+SELECT last_name, hire_date, TO_CHAR(hire_date, 'DAY') AS DAY
+FROM employees
+ORDER BY hire_date;
 
 
 
