@@ -7,14 +7,14 @@
 
 --1.	Напишите запрос для вывода текущей даты. Назовите столбец Date.
 SELECT sysdate "Date"
-FROM dual
+FROM dual;
 
 /*2.	Выведите номер служащего, его фамилию, оклад и новый оклад, 
 повышенный на 15% и округлённый до целого. Назовите столбец New Salary. 
 Сохраните команду SQL в текстовом файле lab3_2sql.*/
 --3.	Выполните запрос из файла lab3_2sql.
 SELECT  employee_id, last_name, salary, ROUND((salary*1.15),0)"New Salary"
-FROM employees
+FROM employees;
 
 
 
@@ -26,7 +26,7 @@ FROM employees
 Сохраните изменённый запрос в lab3_4.sql. Выполните запрос ещё раз.*/
 
 SELECT  employee_id, last_name, salary, ROUND((salary*1.15),0)"New Salary", ROUND((salary*1.15),0) - salary "Increase"
-FROM employees
+FROM employees;
 
 
 /*5.	Выведите фамилии служащих (первая буква каждой фамилии должна быть заглавной, а остальные - строчными) 
@@ -36,4 +36,4 @@ SELECT   INITCAP(last_name) "Surname", LENGTH(last_name) "Length"
 FROM employees
 WHERE last_name LIKE 'J%'
 	OR last_name LIKE 'A%'
-	OR last_name LIKE 'M%'
+	OR last_name LIKE 'M%';
